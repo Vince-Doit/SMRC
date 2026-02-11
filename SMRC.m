@@ -10,7 +10,8 @@ obj = zeros(1,maxIter);
 tic
 numView = length(X); % the number of original views
 n = size(X{2},1); % the number of samples in each view
-Hn = eye(n)-ones(n)/n;
+% Hn = eye(n)-ones(n)/n;
+Hn = eye(n);
 alpha = ones(1,numView)/numView;
 
 F = litekmeans(Z{2}, c,'MaxIter', 50, 'Replicates', 10);  % Initalize the  shared cluster indicator matrix 
